@@ -1,3 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+:root{
+    /*Colors */
+    --primary: #FDB827;
+    --dark: #233506;
+    --light: #FFF;
+    --bg: #FFF9F2; 
+
+    /* Sizes */
+    --content_width: 1170px;
+
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
 body{
-    background-color: blueviolet;
+    font-family: 'Fredoka', sans-serif;
+    
+}
+
+/* Layout*/
+.content {
+    max-width: var(--content_width);
+    z-index: 1;
+    padding: 0 16px;
+}
+
+/* first screen Blick 1 */
+.first-screen {
+    position: relative;
+
+}
+
+.first-screen__bg-segment {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0%;
+    width: 33%;
+    z-index: 0;
+    background-color: #FDB827;
+
+
+}
+
+.first-screen__bg-segment img {
+  
+
 }
