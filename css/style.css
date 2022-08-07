@@ -19,19 +19,35 @@
 
 body{
     font-family: 'Fredoka', sans-serif;
-    
+    background-color: #FFF;
+    color: var(--dark);
 }
-
+a {
+    color: var(--dark); /* установить цвет всем ссылкам из переменной --dark*/
+    text-decoration: none; /* убрать всех ссылок подчеркивание*/
+}
 /* Layout*/
 .content {
+    /*position: relative; /* Позиция относитетельная чегото- немнго не допонимаю данной фуннкции*/
     max-width: var(--content_width);
-    z-index: 1;
+    /*z-index: 1;  позиция по слоям перекрытия*/
     padding: 0 16px;
+}
+.header {
+    display: flex; /* Выравнивание по горизонтали всех элементова*/
+    align-items: center; /* Выравниваем по центру по вертикали*/
+    justify-content: space-between; /* Выравниваем по горизонтали*/
+    padding: 46px 0;
+}
+
+.header__actions {
+    display: flex; /* Расположить по одной линии горизонтально*/
 }
 
 /* first screen Blick 1 */
 .first-screen {
     position: relative;
+    min-height: 100vh;
 
 }
 
@@ -41,13 +57,41 @@ body{
     bottom: 0;
     right: 0%;
     width: 33%;
-    z-index: 0;
+    z-index: -1; /* позиция по слоям перекрытия*/
     background-color: #FDB827;
-
-
 }
 
 .first-screen__bg-segment img {
-  
+    position: absolute;
+    top: 8%;
+    right: 0%;
+    width: 270%;
+}
 
+.menu a:not(:last-child) {
+    margin-right: 46px; /* Отсуп между пунктами меню  */
+}
+
+/* UI Elements */
+.logo {
+    font-size: 36px;
+    font-weight: 600;
+}
+.logo span {
+    color: var(--primary);
+}
+
+/* Button */
+.button {
+    padding: 15px 15px; /* отступы  1 число отступ верхний и нижний, второй показатель
+    отступ между кнопками*/
+    background-color: var(--primary); /* цвет фона*/
+    color: var(--light); /* цвет текста*/
+    font-size: 18px; /*размер кнопки по умолчанию(ну это не точно)*/
+    line-height: 18px;
+    border-radius: 50px; /* Закругление на кнопках*/
+}
+.button_linht {
+    background-color: var(--light);
+    color: var(--primary);
 }
